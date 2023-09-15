@@ -60,13 +60,13 @@
   }
   @media screen and (min-width:1400px){
     .chat-section {
-      height: 215px;
+      height: 210px;
     }
     
   }
 @media screen and (min-width:1600px){
     .chat-section {
-      height: 220px;
+      height: 210px;
     }
     
   }
