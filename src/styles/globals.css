@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Add the following CSS styles to your existing styles or CSS file */
+
+/* Style the chat-section container */
+.chat-section {
+  overflow-y: scroll;
+  height: 180px;
+
+    /* Customize the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, 0.5) rgba(60, 0, 150, 0.8);
+  }
+  
+  /* Customize the scrollbar track (background) */
+  .chat-section::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+  }
+  
+  /* Customize the scrollbar thumb (the draggable part) */
+  .chat-section::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 72, 214, 0.8); /* Color of the thumb (purple) */
+    border-radius: 10px; /* Rounded corners of the thumb */
+  }
+  
+  /* Customize the scrollbar thumb on hover */
+  .chat-section::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(177, 141, 220); /* Lighter purple on hover */
+  }
+  
+  /* Customize the scrollbar track on hover */
+  .chat-section::-webkit-scrollbar-track {
+    background-color: rgba(100, 100, 100, 0.5); /* Color of the track (gray) */
+  }
+  .inner-c{
+    position: absolute;
+    top: 86px;
+    right: 152px;
+    width: 190px;
+ 
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  @media screen and (max-width:400px){
+    .chat-section {
+      height: 180px;
+    }
+  
+  }
+  @media screen and (min-width:400px){
+    .chat-section {
+      height: 180px;
+    }
+    
+    
+  }
+  @media screen and (min-width:1400px){
+    .chat-section {
+      height: 215px;
+    }
+    
+  }
