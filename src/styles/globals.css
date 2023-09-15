@@ -64,3 +64,9 @@
     }
     
   }
+@media screen and (min-width:1600px){
+    .chat-section {
+      height: 220px;
+    }
+    
+  }
