@@ -52,10 +52,11 @@ const Mainfile = () => {
         console.log(error);
       })
     }
+    
   
     return (
       
-      <div className="main-container container mx-auto  flex flex-col">
+      <div className="main-container container mx-auto  flex flex-col h-full">
       <div className="p-2 ">
         <div className='bg-slate-200 inline-block px-2'>
         <h1 className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-left font-bold text-base ">56765 MTN</h1></div>
@@ -79,7 +80,7 @@ const Mainfile = () => {
           )}
         </div>
       </div>
-      <form onSubmit={handleSubmit} className="flex-none pt-2 type-section">
+      <form onSubmit={handleSubmit} className="flex-none pt-2 pb-2 type-section">
         <div className=" w-full pt-0 px-1 ">
           <div className="flex rounded-lg border border-gray-700 ">
             <input

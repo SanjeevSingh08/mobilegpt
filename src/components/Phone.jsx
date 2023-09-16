@@ -8,9 +8,9 @@ const Phone = () => {
       className="w-full flex place-content-center h-screen relative p-4"
       style={{ color: "red" }}
     >
-      <div className="flex place-content-center">
+      <div className="flex place-content-center relative">
         <Image className=" h-[100%] w-[90%]" src={phone} alt="phone" />
-        <div className="inner-c md:h-[44%]    h-[44%] lg:h-[44%] lg:w-[200px] xl:w-[210px] ">
+        <div className="inner-c  ">
 <Mainfile/>
 
 
