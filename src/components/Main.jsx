@@ -37,7 +37,7 @@ const Mainfile = () => {
       const url = '/api/chat';
   
       const data = {
-        model: "gpt-3.5-turbo-0301",
+        model: "gpt-3.5-turbo-0125",
         messages: [{ "role": "user", "content": message }]
       };
   

@@ -4,6 +4,7 @@ import axios from 'axios';
 export default async function handler(req, res) {
   const referer = req.headers.referer || req.headers.referrer; // get the referer from the request headers
 
+
   if (req.method !== 'POST') {
     res.status(405).json({ message: 'Method should be POST' });
   // } else if (process.env.NODE_ENV !== "development") {
@@ -24,7 +25,7 @@ export default async function handler(req, res) {
 
       res.status(200).json(response.data);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
       res.status(500).json({ message: "Something went wrong" });
     }
   }
