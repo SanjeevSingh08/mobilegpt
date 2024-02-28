@@ -49,7 +49,7 @@ const Mainfile = () => {
         setIsLoading(false);
       }).catch((error) => {
         setIsLoading(false);
-        console.log(error);
+        
       })
     }
     
