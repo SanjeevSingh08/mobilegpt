@@ -6,10 +6,35 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import axios from 'axios';
 import TypingAnimation from "../components/TypingAnimation";
+import { Selector } from './component/Selector';
 const Mainfile = () => {
+  const languages = {
+    english: {
+      name: "English",
+      placeholder: "Type your message ...",
+      title: "Type your question here",
+      send: "Send"
+    },
+    french: {
+      name: "French",
+      placeholder: "Tapez votre message ...",
+      title: "Tapez votre question ici",
+      send: "Envoyer"
+    },
+    swahili: {
+      name: "Swahili",
+      placeholder: "Andika ujumbe wako ...",
+      title: "Andika swali lako hapa",
+      send: "Tuma"
+    }
+    // Add more languages as needed
+  };
+  
     const [inputValue, setInputValue] = useState('');
     const [chatLog, setChatLog] = useState([]);
+
     const [isLoading, setIsLoading] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState(languages.english);
   
     // Use a ref to access the chat container element
     const chatContainerRef = useRef(null);
@@ -49,7 +74,7 @@ const Mainfile = () => {
         setIsLoading(false);
       }).catch((error) => {
         setIsLoading(false);
-        
+        console.log(error);
       })
     }
     
@@ -58,9 +83,12 @@ const Mainfile = () => {
       
       <div className="main-container container mx-auto  flex flex-col h-full">
       <div className="p-2 ">
+        <div className='flex justify-between'>
         <div className='bg-slate-200 inline-block px-2'>
         <h1 className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-left font-bold text-base ">56765 MTN</h1></div>
-        <h4 className="text-black text-center py-1 text-[10px] mt-2 ">Type your question here.</h4>
+        <Selector  selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} languages={languages}/>
+        </div>
+        <h4 className="text-black text-center py-1 text-[10px] mt-2 ">{selectedLanguage.title}</h4>
       </div>
       <div className="flex-grow p-2 chat-section overflow-y-auto" ref={chatContainerRef}>
         <div className="flex flex-col mt-1">
@@ -86,7 +114,7 @@ const Mainfile = () => {
             <input
               type="text"
               className="flex-grow px-3 py-1 bg-transparent w-[60%] text-black focus:outline-none text-[11px] "
-              placeholder="Type your message..."
+              placeholder={selectedLanguage.placeholder}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
@@ -94,7 +122,7 @@ const Mainfile = () => {
               type="submit"
               className="bg-purple-500 text-[11px] rounded-lg px-2 py-1 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300"
             >
-              Send
+            {selectedLanguage.send}
             </button>
           </div>
         </div>
