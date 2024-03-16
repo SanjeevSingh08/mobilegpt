@@ -26,9 +26,118 @@ const Mainfile = () => {
       placeholder: "Andika ujumbe wako ...",
       title: "Andika swali lako hapa",
       send: "Tuma"
+    },
+    zulu: {
+      name: "Zulu",
+      placeholder: "Khalipha umyalezo wakho ...",
+      title: "Khalipha ikheli lakho lapha",
+      send: "Thumela"
+    },
+    hausa: {
+      name: "Hausa",
+      placeholder: "Rubuta karanta ...",
+      title: "Rubuta tambaya ta ko ...",
+      send: "Shigar"
+    },
+    amharic: {
+      name: "Amharic",
+      placeholder: "አስፈላጊ መልዕክት ያስገቡ ...",
+      title: "አገልግሎት ማስታወቂያዎን ያግኙ",
+      send: "አቅርቡ"
+    },
+    somali: {
+      name: "Somali",
+      placeholder: "Gali qoraalkaaga ...",
+      title: "Gali su'aalkeega halkan",
+      send: "Dir"
+    },
+    yoruba: {
+      name: "Yoruba",
+      placeholder: "Ṣe iṣẹ́ ilàn rẹ ...",
+      title: "Ṣe iṣẹ́ iṣẹ́ yìí",
+      send: "Ṣiṣe"
+    },
+    igbo: {
+      name: "Igbo",
+      placeholder: "Tinye akwụkwọ gị ...",
+      title: "Tinye akụkọ gị ọhụụ",
+      send: "Rie"
+    },
+    spanish: {
+      name: "Spanish",
+      placeholder: "Escribe tu mensaje ...",
+      title: "Escribe tu pregunta aquí",
+      send: "Enviar"
+    },
+    german: {
+      name: "German",
+      placeholder: "Schreibe deine Nachricht ...",
+      title: "Schreibe deine Frage hier",
+      send: "Senden"
+    },
+    italian: {
+      name: "Italian",
+      placeholder: "Scrivi il tuo messaggio ...",
+      title: "Scrivi la tua domanda qui",
+      send: "Invia"
+    },
+    dutch: {
+      name: "Dutch",
+      placeholder: "Typ je bericht ...",
+      title: "Typ hier je vraag",
+      send: "Verzenden"
+    },
+    portuguese: {
+      name: "Portuguese",
+      placeholder: "Digite sua mensagem ...",
+      title: "Digite sua pergunta aqui",
+      send: "Enviar"
+    },
+    russian: {
+      name: "Russian",
+      placeholder: "Введите ваше сообщение ...",
+      title: "Введите ваш вопрос здесь",
+      send: "Отправить"
+    },
+    chinese: {
+      name: "Chinese",
+      placeholder: "输入您的消息 ...",
+      title: "在这里输入您的问题",
+      send: "发送"
+    },
+    japanese: {
+      name: "Japanese",
+      placeholder: "メッセージを入力してください...",
+      title: "ここに質問を入力してください",
+      send: "送信"
+    },
+    korean: {
+      name: "Korean",
+      placeholder: "메시지를 입력하세요 ...",
+      title: "여기에 질문을 입력하세요",
+      send: "보내기"
+    },
+    arabic: {
+      name: "Arabic",
+      placeholder: "اكتب رسالتك ...",
+      title: "اكتب سؤالك هنا",
+      send: "إرسال"
+    },
+    turkish: {
+      name: "Turkish",
+      placeholder: "Mesajınızı yazın ...",
+      title: "Sorunuzu buraya yazın",
+      send: "Gönder"
+    },
+    hindi: {
+      name: "Hindi",
+      placeholder: "अपना संदेश लिखें ...",
+      title: "अपना प्रश्न यहाँ लिखें",
+      send: "भेजें"
     }
     // Add more languages as needed
   };
+  
   
     const [inputValue, setInputValue] = useState('');
     const [chatLog, setChatLog] = useState([]);

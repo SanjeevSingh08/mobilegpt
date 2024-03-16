@@ -17,6 +17,7 @@
   /* Customize the scrollbar track (background) */
   .chat-section::-webkit-scrollbar {
     width: 3px; /* Width of the scrollbar */
+    border-radius: 10px; /* Rounded corners of the thumb */
   }
   
   /* Customize the scrollbar thumb (the draggable part) */
@@ -34,6 +35,34 @@
   .chat-section::-webkit-scrollbar-track {
     background-color: rgba(100, 100, 100, 0.5); /* Color of the track (gray) */
   }
+  .scroller{
+        /* Customize the scrollbar */
+        scrollbar-width: thin;
+        border-radius: 10px; /* Rounded corners of the thumb */
+      }
+      
+      /* Customize the scrollbar track (background) */
+      .scroller::-webkit-scrollbar {
+        width: 2px; /* Width of the scrollbar */
+      }
+      
+      /* Customize the scrollbar thumb (the draggable part) */
+      .scroller::-webkit-scrollbar-thumb {
+        background-color: rgba(169, 72, 214, 0.8); /* Color of the thumb (purple) */
+        border-radius: 10px; /* Rounded corners of the thumb */
+      }
+      
+      /* Customize the scrollbar thumb on hover */
+      .scroller::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(177, 141, 220); /* Lighter purple on hover */
+      }
+      
+      /* Customize the scrollbar track on hover */
+      .scroller::-webkit-scrollbar-track {
+        background-color: rgba(100, 100, 100, 0.5); /* Color of the track (gray) */
+   
+      }
+  
   .inner-c{
     position: absolute;
     top: 10%;

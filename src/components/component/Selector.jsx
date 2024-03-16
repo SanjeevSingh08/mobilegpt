@@ -22,7 +22,7 @@ export function Selector({selectedLanguage,setSelectedLanguage,languages}) {
         <DropdownMenuContent className="mt-1">
         
           
-          <DropdownMenuItem className="text-black text-xs " onClick={() => handleLanguageChange("english")}>
+          {/* <DropdownMenuItem className="text-black text-xs " onClick={() => handleLanguageChange("english")}>
             {selectedLanguage === "english" && <CheckIcon className="w-2 h-2 text-xs -translate-x-1 mr-2 text-black" />}
             English
           </DropdownMenuItem>
@@ -33,7 +33,14 @@ export function Selector({selectedLanguage,setSelectedLanguage,languages}) {
           <DropdownMenuItem className="text-black text-xs" onClick={() => handleLanguageChange("swahili")}>
             {selectedLanguage === "swahili" && <CheckIcon className="w-4 h-4 text-xs -translate-x-1 mr-1 text-black" />}
             Swahili
-          </DropdownMenuItem>
+          </DropdownMenuItem> */}
+
+{Object.keys(languages).map((key) => (
+        <DropdownMenuItem className="text-black text-xs " onClick={() => handleLanguageChange(key)} key={key}>
+          {selectedLanguage === key && <CheckIcon className="w-4 h-4 text-xs -translate-x-1 mr-1 text-black" />}
+          {languages[key].name}
+        </DropdownMenuItem>
+      ))}
     
         </DropdownMenuContent>
       </DropdownMenu>
