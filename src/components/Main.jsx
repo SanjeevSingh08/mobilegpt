@@ -194,7 +194,7 @@ const Mainfile = () => {
       <div className="p-2 ">
         <div className='flex justify-between'>
         <div className='bg-slate-200 inline-block px-2'>
-        <h1 className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-left font-bold text-base ">56765 MTN</h1></div>
+        <h1 className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-left font-bold text-base ">56765</h1></div>
         <Selector  selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} languages={languages}/>
         </div>
         <h4 className="text-black text-center py-1 text-[10px] mt-2 ">{selectedLanguage.title}</h4>
