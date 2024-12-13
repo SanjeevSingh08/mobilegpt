@@ -160,7 +160,7 @@ const Mainfile = () => {
   
       setChatLog((prevChatLog) => [...prevChatLog, { type: 'user', message: inputValue }]);
       const prompt =
-      "Please answer in 8 year old kid understandable language and within 140 characters and  not more than 140 characters, it could be 80 characters or 50 characters but not more than 140 characters: \n here is the question" +
+      "Please answer in 8 year old kid understandable language and within 140 characters and  not more than 140 characters, it could be 80 characters or 50 characters but not more than 140 characters, Always respond in the same language as the user's question: \n here is the question" +
       inputValue;
       sendMessage(prompt);
   
